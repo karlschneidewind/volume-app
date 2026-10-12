@@ -1,0 +1,40 @@
+/* Volume's public pages: the privacy policy and the support page, in English and German.
+   Colours are copies of App/Features/Shared/Theme.swift. Nothing is loaded from anywhere else —
+   no fonts, no scripts, no analytics — so a visit sends nothing beyond what GitHub Pages logs. */
+:root {
+  --surface: #ffffff;
+  --surface-raised: #f2f3f5;
+  --ink: #111214;
+  --ink-secondary: #565b60;
+  --hairline: #e5e7ea;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #0e0f11;
+    --surface-raised: #1a1c1f;
+    --ink: #f4f5f7;
+    --ink-secondary: #a3a9af;
+    --hairline: #2a2d32;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--ink);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main { max-width: 40rem; margin: 0 auto; padding: 2.5rem 1rem 4rem; }
+nav { display: flex; justify-content: space-between; gap: 1rem; font-size: 0.9rem; margin-bottom: 2.5rem; }
+nav a { color: var(--ink-secondary); }
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 0.25rem; letter-spacing: -0.01em; }
+h2 { font-size: 1.15rem; margin: 2.25rem 0 0.5rem; }
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: 0.4rem; }
+a { color: var(--ink); text-underline-offset: 0.15em; }
+.meta { color: var(--ink-secondary); margin-bottom: 2rem; }
+.summary { background: var(--surface-raised); border-radius: 12px; padding: 1rem 1.25rem; }
+.summary p:last-child { margin-bottom: 0; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--hairline); color: var(--ink-secondary); font-size: 0.9rem; }
